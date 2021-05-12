@@ -1,13 +1,12 @@
 <?php
-
-$note = 10;
-$note2 = 4;
-si tu veux destructurer le code afin de mieux le comprendre
-$total = $note + $note2;
-
-echo $total;
-
-$nom = "imad";
-echo $nom;
- 
-?>
+$insultes = ["merde","con"];
+$phrase = readline("Entrer une phrase ");
+$insultes[] = $phrase; 
+foreach ($insultes as $instulte ){
+    if ($instulte === $phrase) {
+        $replace = str_repeat("*",strlen($instulte));
+        $phrase =  str_replace($instulte,$replace,$phrase);
+        echo $phrase;
+    }
+};
+?>   
