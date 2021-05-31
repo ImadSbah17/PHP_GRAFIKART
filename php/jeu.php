@@ -7,21 +7,33 @@ $succes = null;
 $value = null;
 
 if (isset($_GET['chiffre'])) {
-    if ($_GET['chiffre'] >  $aDeviner) {
+    $value = (int)$_GET['chiffre'];
+    if ($value > $aDeviner) {
         $error = "votre chiffre est trop grand";
-    }elseif($_GET['chiffre'] < $aDeviner){
+    }elseif($value < $aDeviner){
         $error = "votre chiffre est trops petit";
     }else{
         $succes = "Bravo ! vous avez deviner le chiffre <strong>$aDeviner</stong>";
     }
-    $value = (int)$_GET['chiffre'];
 }
 ?> 
 
+<div class="container w-50">
+    <h2 class="text-center pb-2">Méthode GET</h2>
+    <p class="border border-danger">Pour que les donnée mis dans le forms se retrouve sur l'url utile éventuellement pour les recherches</p>
+    <pre>
+        <?php var_dump($_GET);?>
+    </pre>
+</div>
+
+<div class="container w-50">
+    <h2 class="text-center pb-2">Méthode POST</h2>
+    <p class="border border-danger">Pour que les données mis dans mon forms ne s'affiche pas dans l'url (code,donnée sensible,etc...)</p>
+    <pre>
+        <?php var_dump($_POST);?>
+    </pre>
+</div>
  
-<pre class="container w-50 text-center">
-   <?php var_dump($_GET);?>
-</pre>
  
 <!-- 2. ce que je veux afficher  -->
 <div class="container w-50">
