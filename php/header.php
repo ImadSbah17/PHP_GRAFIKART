@@ -1,3 +1,7 @@
+<?php 
+require_once '../php/fonctions.php';
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -29,17 +33,9 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-        
-          <li class="nav-item <?php if ($_SERVER['SCRIPT_NAME'] === "/index.php"):?>active<?php endif;?>">
-            <a class="nav-link" href="/index.php">Accueil</a>
-          </li>
-
-          <li class="nav-item <?php if ($_SERVER['SCRIPT_NAME'] === "/contact.php"):?>active<?php endif;?>">
-            <a class="nav-link" href="/contact.php">contact</a>
-          </li>
-           
-        </ul>
+        <ul class="navbar-nav mr-auto">  
+          <?= nav_menu('nav-link'); ?>
+         </ul>
       </div>
     </nav>
 

@@ -1,5 +1,12 @@
 </main><!-- /.container -->
 
+<div class="row container mx-auto">
+    <ul class="list-unstyled">
+        <?= nav_menu(); ?>
+         
+    </ul>
+</div>
+
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
