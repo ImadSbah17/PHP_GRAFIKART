@@ -1,9 +1,8 @@
 </main><!-- /.container -->
 
 <div class="row container mx-auto">
-    <ul class="list-unstyled">
-        <?= nav_menu(); ?>
-         
+    <ul class="list-unstyled d-flex">
+        <?= nav_menu(); ?>   
     </ul>
 </div>
 
